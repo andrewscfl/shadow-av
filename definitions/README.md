@@ -1,0 +1,1 @@
+definitions are pulled from malwarebazaar and downloaded to this folder
