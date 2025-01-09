@@ -24,7 +24,6 @@ class Scan:
                     print("Error hashing file: " + file_path)
                     continue
 
-                print(md5_hash + " " + file_path)
                 if md5_hash in self.malware_md5_hashes:
                     malware_found.append(file_path)
 
@@ -81,7 +80,7 @@ class Scan:
     def load_malware_definitions(self):
         malware_definitions = []
         malware_md5_hashes = []
-        with open("definitions/full.csv") as file:
+        with open("definitions/full.csv", encoding='utf-8') as file:
             reader = csv.reader(file)
             for row in reader:
                 malware_definitions.append(row)
